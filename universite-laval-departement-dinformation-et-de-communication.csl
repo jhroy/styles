@@ -19,7 +19,7 @@
     </contributor>
     <category citation-format="author-date"/>
     <category field="communications"/>
-    <summary>Le style de citation des références bibliographiques du Département d'information et de communication de l'Université Laval.</summary>
+    <summary>Style de citation des références bibliographiques répondant aux critères du département d'information et de communication de l'Université Laval.</summary>
     <updated>2012-09-27T22:06:38+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
@@ -28,7 +28,7 @@
   </macro>
   <macro name="author">
     <names variable="author">
-      <name and="text" name-as-sort-order="first" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
+      <name and="text" name-as-sort-order="first" sort-separator=", " delimiter=", " delimiter-precedes-last="always" initialize-with="."/>
       <et-al font-style="italic"/>
       <label form="short" prefix=", " text-case="lowercase"/>
       <substitute>
@@ -76,7 +76,7 @@
     <choose>
       <if variable="URL">
         <group prefix="(" suffix=")" delimiter=" ">
-          <text value="Consulté le"/>
+          <text value="consulté le"/>
           <date variable="accessed">
             <date-part name="day" suffix=" "/>
             <date-part name="month" suffix=" "/>
@@ -108,7 +108,7 @@
     <choose>
       <if type="chapter paper-conference article-journal article-magazine article-newspaper webpage" match="any">
         <group suffix=". ">
-          <text variable="container-title" font-style="italic" form="short"/>
+          <text variable="container-title" font-style="italic"/>
           <choose>
             <if variable="URL">
               <text value="en ligne" prefix=" [" suffix="]" text-case="capitalize-first"/>
